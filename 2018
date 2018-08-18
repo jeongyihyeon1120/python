@@ -1,0 +1,24 @@
+a = int(input("반복 횟수"))
+c = 0
+d = 0
+x = [1]
+y = []
+print(x)
+for b in range(a - 1):
+    if b == 0:
+        while len(x) + 1 > c:
+            c += 1
+            y.append(1)
+        print(y)
+        c = 0
+    else:
+        y.append(1)
+        while b > c:
+            z = y[c] + y[len(y) - (d + 2)]
+            c += 1
+            y.append(z)
+        y.append(1)
+        del y[:b + 1]
+        print(y)
+        c = 0
+        d += 1
